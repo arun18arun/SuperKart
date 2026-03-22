@@ -7,12 +7,11 @@ jobs:
 
 register-dataset:
 runs-on: ubuntu-latest
+steps:
+- name: Checkout Code
+uses: actions/checkout@v3
 
 ```
-steps:
-  - name: Checkout Code
-    uses: actions/checkout@v3
-
   - name: Setup Python
     uses: actions/setup-python@v4
     with:
@@ -32,12 +31,11 @@ steps:
 data-prep:
 needs: register-dataset
 runs-on: ubuntu-latest
+steps:
+- name: Checkout Code
+uses: actions/checkout@v3
 
 ```
-steps:
-  - name: Checkout Code
-    uses: actions/checkout@v3
-
   - name: Setup Python
     uses: actions/setup-python@v4
     with:
@@ -57,12 +55,11 @@ steps:
 model-training:
 needs: data-prep
 runs-on: ubuntu-latest
+steps:
+- name: Checkout Code
+uses: actions/checkout@v3
 
 ```
-steps:
-  - name: Checkout Code
-    uses: actions/checkout@v3
-
   - name: Setup Python
     uses: actions/setup-python@v4
     with:
@@ -82,12 +79,11 @@ steps:
 deploy-hosting:
 needs: model-training
 runs-on: ubuntu-latest
+steps:
+- name: Checkout Code
+uses: actions/checkout@v3
 
 ```
-steps:
-  - name: Checkout Code
-    uses: actions/checkout@v3
-
   - name: Setup Python
     uses: actions/setup-python@v4
     with:
