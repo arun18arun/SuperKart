@@ -1,4 +1,4 @@
-name: SuperKart MLOps Pipeline
+name: SuperKart Pipeline
 
 on:
 workflow_dispatch:
